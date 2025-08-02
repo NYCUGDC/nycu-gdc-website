@@ -9,37 +9,38 @@
 <template>
     <header>
         <NuxtLink class="button" to="/" style="color: unset; text-decoration: none; flex: 0 0 310px;">
-            <div style="font: 400 12px 'Press Start 2P'; margin-bottom: 30px; color: var(--blue)">NYCU GAME DESIGN CLUB</div>
+            <div style="font: 400 12px 'Press Start 2P'; margin-bottom: 15px; color: var(--blue)">NYCU GAME DESIGN CLUB</div>
             <div style="display: flex; gap: 15px; align-items: center;">
-                <img src="/icon.png" alt="" style="image-rendering: pixelated; width: 75px; height: 75px;">
+                <img src="/icon.png" alt="" style="image-rendering: pixelated; width: 55px; height: 55px; border-radius: 10px;">
                 <h1>
-                    <div style="font: 400 18px Noto Sans TC;">陽明交通大學</div>
-                    <div style="font: 700 40px Noto Sans TC; letter-spacing: 3px; margin-left: -2px;">遊戲設計社</div>
+                    <div style="font: 400 12px Noto Sans TC; letter-spacing: 3px;">陽明交通大學</div>
+                    <div style="font: 700 28px Noto Sans TC; letter-spacing: 3px; margin-left: -2px;">遊戲設計社</div>
                 </h1>
             </div>
         </NuxtLink>
+        <div style="flex: 1;"></div>
         <nav :data-show="showMenu" @click="showMenu = false">
-            <NuxtLink class="button" to="/">
-                <div class="button-text-1">HOME</div>
+            <NuxtLink class="button" to="/" :data-highlight="$route.path == '/'">
+                <div class="button-text-1">Home</div>
                 <div class="button-text-2">主頁</div>
             </NuxtLink>
-            <NuxtLink class="button" to="/about">
-                <div class="button-text-1">ABOUT</div>
+            <NuxtLink class="button" to="/about" :data-highlight="$route.path.startsWith('/about')">
+                <div class="button-text-1">About</div>
                 <div class="button-text-2">關於</div>
             </NuxtLink>
-            <NuxtLink class="button" to="/news">
-                <div class="button-text-1">NEWS</div>
+            <NuxtLink class="button" to="/news" :data-highlight="$route.path.startsWith('/news')">
+                <div class="button-text-1">News</div>
                 <div class="button-text-2">最新消息</div>
             </NuxtLink>
-            <NuxtLink class="button" to="/library">
-                <div class="button-text-1">LIBRARY</div>
+            <NuxtLink class="button" to="/library" :data-highlight="$route.path.startsWith('/library')">
+                <div class="button-text-1">Library</div>
                 <div class="button-text-2">資料</div>
             </NuxtLink>
-            <NuxtLink class="button" to="/games">
-                <div class="button-text-1">GAMES</div>
+            <NuxtLink class="button" to="/games" :data-highlight="$route.path.startsWith('/games')">
+                <div class="button-text-1">Games</div>
                 <div class="button-text-2">遊戲作品</div>
             </NuxtLink>
-            <NuxtLink class="button" to="/character">
+            <NuxtLink class="button" to="/character" :data-highlight="$route.path.startsWith('/character')">
                 <div class="button-text-1">Character</div>
                 <div class="button-text-2">原創角色</div>
             </NuxtLink>
@@ -52,9 +53,13 @@
     header {
         display: flex;
         background: var(--gray);
-        padding: 30px 5vw;
+        padding: 15px 5vw;
         align-items: flex-end;
         gap: 30px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        border-bottom: 2px solid #fafafa;
     }
     
     header h1 {
@@ -74,17 +79,21 @@
         color: unset;
         text-decoration: none;
         position: relative;
-        margin-bottom: 6px;
+        margin-bottom: 3px;
+    }
+
+    nav .button[data-highlight='false'] {
+        color: var(--dark);
     }
 
     nav .button::after {
         content: '';
         position: absolute;
-        width: 18px;
-        height: 24px;
+        width: 12px;
+        height: 18px;
         background: var(--orange);
-        left: 8px;
-        top: 5px;
+        left: 15px;
+        top: 3px;
         clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
         visibility: hidden;
     }
@@ -94,7 +103,7 @@
     }
 
     nav .button-text-1 {
-        font: 400 18px 'Press Start 2P';
+        font: 400 15px 'Press Start 2P';
     }
 
     nav .button-text-2 {

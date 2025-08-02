@@ -20,7 +20,8 @@
 
 <template>
     <main style="padding: 5vw;">
-        <h1 style="margin-top: 200px;">準備中，敬請期待...</h1>
+        <h1>原創角色</h1>
+        <p style="margin-top: 200px; font-family: Noto Sans TC; letter-spacing: 1px;">準備中，敬請期待...</p>
     </main>
 </template>
 

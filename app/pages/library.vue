@@ -1,11 +1,13 @@
 <script setup>
     import { gsap } from 'gsap'
+
+    const { data } = await useAsyncData(() => queryCollection('library').all())
     
     let ctx
 
     onMounted(() => {
         ctx = gsap.context(() => {
-            gsap.from('.link-block', { y: 60, opacity: 0, stagger: 0.1 })
+            gsap.from('h2, .link-block', { y: 60, opacity: 0, stagger: 0.1 })
         })
     })
 
@@ -20,13 +22,10 @@
 
 <template>
     <main style="padding: 5vw;">
-        <h1>文檔</h1>
-        <section style="display: flex; flex-direction: column; gap: 15px;">
-            <h2>GDC 暑期角色專案</h2>
-            <LinkBlock link="" name="Check Point 1" date="2025" />
-            <LinkBlock link="" name="Check Point 2" date="2025" />
-            <LinkBlock link="" name="Check Point 3" date="2025" />
-            <LinkBlock link="" name="像素風格簡介" date="2025" />
+        <h1>資料</h1>
+        <section v-for="section in data" style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 120px;">
+            <h2>{{ section.title }}</h2>
+            <LinkBlock v-for="file in section.documents" :link="file.link" :name="file.title" :date="file.subtitle" target="_blank" />
         </section>
     </main>
 </template>

@@ -69,6 +69,8 @@
         margin: 0;
         color: var(--orange);
         background: repeating-linear-gradient(90deg, transparent 0px, transparent 19px, var(--gray) 19px, var(--gray) 20px), repeating-linear-gradient(0deg, transparent 0px, transparent 19px, var(--gray) 19px, var(--gray) 20px);
+        background: radial-gradient(var(--gray) 0px, var(--gray) 1px, transparent 2px);
+        background-size: 20px 20px;
     }
 
     ::selection {

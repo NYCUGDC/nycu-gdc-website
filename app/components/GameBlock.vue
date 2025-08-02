@@ -3,13 +3,13 @@
 </script>
 
 <template>
-    <NuxtLink :to="props.link" target="_blank" style="color: unset; text-decoration: none;">
-        <article class="game-block">
+    <NuxtLink :to="props.link" class="game-block" target="_blank">
+        <article>
             <img :src="props.img" alt="" >
             <div>
                 <h1 style="margin: 0px;">{{ props.name }}</h1>
                 <div style="font: 400 12px Noto Sans TC; color: var(--blue)">{{ props.date }}</div>
-                <p style="color: var(--dark);">{{ props.description }}</p>
+                <p style="color: var(--dark); white-space: pre-wrap;">{{ props.description }}</p>
             </div>
         </article>
     </NuxtLink>
@@ -17,9 +17,12 @@
 
 <style>
     .game-block {
+        color: unset;
+        text-decoration: none;
         padding: 25px;
         background: var(--gray);
-        border-radius: 30px;
+        border: 2px solid #fafafa;
+        border-radius: 10px;
     }
 
     .game-block img {

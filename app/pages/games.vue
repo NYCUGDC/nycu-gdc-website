@@ -1,5 +1,7 @@
 <script setup>
     import { gsap } from 'gsap'
+
+    const { data } = await useAsyncData(() => queryCollection('games').order('date', 'DESC').all())
     
     let ctx
 
@@ -22,9 +24,7 @@
     <main style="padding: 5vw;">
         <h1>遊戲作品</h1>
         <section id="games">
-            <GameBlock link="" name="遊戲 1" date="2025" description="測試" img="/games/game1.png" />
-            <GameBlock link="" name="遊戲 2" date="2025" description="測試" img="/games/game1.png" />
-            <GameBlock link="" name="遊戲 3" date="2025" description="測試" img="/games/game1.png" />
+            <GameBlock v-for="game in data" :link="game.link" :name="game.name" :date="game.date" :description="game.description" img="/games/game1.png" />
         </section>
     </main>
 </template>

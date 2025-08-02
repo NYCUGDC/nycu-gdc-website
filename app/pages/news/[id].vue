@@ -1,0 +1,40 @@
+<script setup>
+    import { gsap } from 'gsap'
+    
+    const path = useRoute().path
+    const { data } = await useAsyncData(() => queryCollection('news').path(path).first())
+
+    let ctx
+
+    onMounted(() => {
+        ctx = gsap.context(() => {
+            gsap.from('main h1, main h2, #news', { y: 60, opacity: 0, stagger: 0.1 })
+        })
+    })
+
+    onUnmounted(() => {
+        ctx.revert()
+    })
+
+    useSeoMeta({
+        title: '最新消息'
+    })
+</script>
+
+<template>
+    <main style="padding: 5vw;">
+        <NuxtLink to="/news" style="color: var(--orange);">《 最新消息</NuxtLink>
+        <h1>{{ data.title }}</h1>
+        <h2>{{ data.date }}</h2>
+        <ContentRenderer :value="data" id="news"/>
+    </main>
+</template>
+
+<style>
+    #news p {
+        font: 400 15px Noto Sans TC;
+        line-height: 2;
+        letter-spacing: 1px;
+        color: var(--dark);
+    }
+</style>
