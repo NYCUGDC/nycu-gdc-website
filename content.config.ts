@@ -2,15 +2,24 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 
 export default defineContentConfig({
   collections: {
-    library: defineCollection({
-      source: 'library/*.yml',
+    character: defineCollection({
+      source: 'character.yml',
       type: 'data',
       schema: z.object({
-        title: z.string(),
-        documents: z.array(z.object({
-          title: z.string(),
-          subtitle: z.string(),
-          link: z.string()
+        gallery: z.array(z.string())
+      })
+    }),
+    library: defineCollection({
+      source: 'library.yml',
+      type: 'data',
+      schema: z.object({
+        list: z.array(z.object({
+          category: z.string(),
+          documents: z.array(z.object({
+            title: z.string(),
+            subtitle: z.string(),
+            link: z.string()
+          }))
         }))
       })
     }),

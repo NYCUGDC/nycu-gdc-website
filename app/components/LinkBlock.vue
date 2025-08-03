@@ -19,7 +19,7 @@
 
 <style>
     .link-block {
-        padding: 25px;
+        padding: 20px;
         background: var(--gray);
         border: 2px solid #fafafa;
         border-radius: 10px;
