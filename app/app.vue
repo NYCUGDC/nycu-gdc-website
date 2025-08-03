@@ -51,7 +51,7 @@
     <NuxtPage />
     <SiteFooter />
     <div id="loading">
-        LOADING...
+        LOADING<span style="animation: loading 1.5s 0s infinite steps(1);">.</span><span style="animation: loading 1.5s 0.25s infinite steps(1);">.</span><span style="animation: loading 1.5s 0.5s infinite steps(1);">.</span>
     </div>
 </template>
 
@@ -95,5 +95,11 @@
         align-items: center;
         font: 400 21px 'Press Start 2P';
         z-index: 3;
+    }
+
+    @keyframes loading {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+        100% { opacity: 1; }
     }
 </style>

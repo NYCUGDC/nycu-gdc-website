@@ -23,7 +23,7 @@
 
 <template>
     <main style="padding: 5vw;">
-        <NuxtLink to="/news" style="color: var(--orange);">《 最新消息</NuxtLink>
+        <NuxtLink to="/news" style="color: var(--orange); text-decoration: none; padding: 2px 10px; background: var(--gray); border-radius: 10px;">最新消息</NuxtLink>
         <h1>{{ data.title }}</h1>
         <h2>{{ data.date }}</h2>
         <ContentRenderer :value="data" id="news"/>
