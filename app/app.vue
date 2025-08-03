@@ -37,11 +37,14 @@
 
     useSeoMeta({
         lang: 'zh-tw',
+        themeColor: '#ff9a00',
         titleTemplate: titleChunk => (titleChunk? `${titleChunk} | NYCU GDC 遊戲設計社` : `NYCU GDC 遊戲設計社`),
         ogTitle: 'NYCU GDC 遊戲設計社',
         description: '陽明交大遊戲設計社（NYCU GDC），誠徵邀請對遊戲製作、虛擬實境、動畫/角色/場景建模有興趣的你 (不論科系)，在大學期間與夥伴一起玩遊戲、做遊戲！',
         ogDescription: '陽明交大遊戲設計社（NYCU GDC），誠徵邀請對遊戲製作、虛擬實境、動畫/角色/場景建模有興趣的你 (不論科系)，在大學期間與夥伴一起玩遊戲、做遊戲！',
-        themeColor: '#ff9a00'
+        ogSiteName: 'NYCU GDC 遊戲設計社',
+        ogUrl: 'https://www.nycu-gdc.org/',
+        ogImage: 'https://www.nycu-gdc.org/site_image.png'
     })
 
     const route = useRoute()
