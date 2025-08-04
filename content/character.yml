@@ -1,7 +1,37 @@
 gallery:
-  - /character/test.png
-  - /character/test.png
-  - /character/test.png
-  - /character/test.png
-  - /character/test.png
-  - /character/test.png
+  - image: /character/test.png
+    name: 角色 1
+    description: |
+      角色 1
+      介紹
+      ...
+  - image: /character/test.png
+    name: 角色 2
+    description: |
+      角色 2
+      介紹
+      ...
+  - image: /character/test.png
+    name: 角色 3
+    description: |
+      角色 3
+      介紹
+      ...
+  - image: /character/test.png
+    name: 角色 4
+    description: |
+      角色 4
+      介紹
+      ...
+  - image: /character/test.png
+    name: 角色 5
+    description: |
+      角色 5
+      介紹
+      ...
+  - image: /character/test.png
+    name: 角色 6
+    description: |
+      角色 6
+      介紹
+      ...

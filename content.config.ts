@@ -6,7 +6,11 @@ export default defineContentConfig({
       source: 'character.yml',
       type: 'data',
       schema: z.object({
-        gallery: z.array(z.string())
+        gallery: z.array(z.object({
+          image: z.string(),
+          name: z.string(),
+          description: z.string()
+        }))
       })
     }),
     library: defineCollection({

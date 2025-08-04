@@ -7,7 +7,7 @@
 
     onMounted(() => {
         ctx = gsap.context(() => {
-            gsap.from('main', {  opacity: 0, stagger: 0.1 })
+            gsap.from('article', { y: 60, opacity: 0, stagger: 0.1 })
         })
     })
 
@@ -25,7 +25,13 @@
         <h1>原創角色</h1>
         <p style="margin-top: 60px; font-family: Noto Sans TC; letter-spacing: 1px;">準備中，敬請期待...</p>
         <div class="gallery">
-            <img v-for="image in data.gallery" :src="image" alt="">
+            <article v-for="character in data.gallery" class="character-split-view">
+                <img :src="character.image" alt=""></img>
+                <div style="padding: 10px;">
+                    <h1>{{ character.name }}</h1>
+                    <p style="font: 400 15px Noto Sans TC; color: var(--dark); white-space: pre-wrap;">{{ character.description }}</p>
+                </div>
+            </article>
         </div>
     </main>
 </template>
@@ -33,15 +39,31 @@
 <style>
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+        gap: 20px;
     }
 
     .gallery img {
         width: 100%;
+        border-radius: 5px;
+    }
+
+    .character-split-view {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: var(--gray);
+        overflow: hidden;
+        border-radius: 10px;
+        gap: 10px;
+        padding: 10px;
     }
 
     @media (max-width: 800px) {
         .gallery {
+            grid-template-columns: 1fr;
+        }
+
+        .character-split-view {
             grid-template-columns: 1fr;
         }
     }

@@ -17,7 +17,7 @@
 
 <template>
     <main style="padding: 5vw;">
-        <img id="welcome" src="/welcome.png" alt="" style="image-rendering: pixelated; width: max(50vw, 300px); margin-left: auto; display: block;">
+        <img id="welcome" src="/welcome.png" alt="" style="image-rendering: pixelated; width: max(50vw, 300px); margin: auto; display: block;">
         <div class="window">
             <div style="background: var(--orange); padding: 10px 35px; font: 400 15px 'Press Start 2P'; color: #ffffff">HELLO WORLD!</div>
             <p>陽明交大遊戲設計社（NYCU GDC），誠徵邀請對遊戲製作、虛擬實境、動畫/角色/場景建模有興趣的你 (不論科系)，在大學期間與夥伴一起玩遊戲、做遊戲！</p>
@@ -36,6 +36,7 @@
         border-radius: 10px;
         overflow: hidden;
         background: #ffffff;
+        margin: auto;
     }
 
     .window p {

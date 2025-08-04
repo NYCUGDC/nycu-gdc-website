@@ -19,7 +19,7 @@
     .game-block {
         color: unset;
         text-decoration: none;
-        padding: 25px;
+        padding: 10px;
         background: var(--gray);
         border: 2px solid #fafafa;
         border-radius: 10px;
