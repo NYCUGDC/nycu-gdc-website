@@ -23,13 +23,15 @@
 <template>
     <main style="padding: 5vw;">
         <h1>原創角色</h1>
-        <p style="margin-top: 60px; font-family: Noto Sans TC; letter-spacing: 1px;">準備中，敬請期待...</p>
-        <div class="gallery">
-            <article v-for="character in data.gallery" class="character-split-view">
-                <img :src="character.image" alt=""></img>
-                <div style="padding: 10px;">
-                    <h1>{{ character.name }}</h1>
-                    <p style="font: 400 15px Noto Sans TC; color: var(--dark); white-space: pre-wrap;">{{ character.description }}</p>
+        <p v-if="!data || !data.gallery || data.gallery.length === 0" style="margin-top: 60px; font-family: Noto Sans TC; letter-spacing: 1px;">準備中，敬請期待...</p>
+        <div v-else class="gallery">
+            <article v-for="(character, i) in data.gallery" :key="character.name" class="w-2/3" :class="i % 2 === 0 ? 'justify-self-start' : 'justify-self-end'">
+                <div class="character-split-view">
+                    <img :src="character.image" :alt="character.name"></img>
+                    <div style="padding: 10px;">
+                        <h1>{{ character.name }}</h1>
+                        <p style="font: 400 15px Noto Sans TC; color: var(--dark); white-space: pre-wrap;">{{ character.description }}</p>
+                    </div>
                 </div>
             </article>
         </div>
