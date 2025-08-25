@@ -1,37 +1,141 @@
 gallery:
-  - image: /character/test.png
-    name: 角色 1
-    description: |
-      角色 1
-      介紹
-      ...
-  - image: /character/test.png
-    name: 角色 2
-    description: |
-      角色 2
-      介紹
-      ...
-  - image: /character/test.png
-    name: 角色 3
-    description: |
-      角色 3
-      介紹
-      ...
-  - image: /character/test.png
-    name: 角色 4
-    description: |
-      角色 4
-      介紹
-      ...
-  - image: /character/test.png
-    name: 角色 5
-    description: |
-      角色 5
-      介紹
-      ...
-  - image: /character/test.png
-    name: 角色 6
-    description: |
-      角色 6
-      介紹
-      ...
+  - image: /character/hale.png
+    name: Hale (海兒)
+    author: Hung Min-Yu
+    description:
+      - label: 年齡
+        value: 外觀17歲(實際為AI單位No.74)
+      - label: 出生年代
+        value: 2058年(批次生成時間)
+      - label: 所在地
+        value: 遊戲內部伺服器/模擬測試環境
+      - label: 種族
+        value: AI測試員(少女型外觀模板)
+      - label: 職業
+        value: 潛伏式遊戲功能測試員
+      - label: 個性
+        value: 冷靜、技術自信、沉默觀察型
+      - label: 外觀關鍵字
+        value: 狐狸耳複合装置、公發制服、隱蔽小裝飾
+      - label: 性格優點/缺點
+        value: 優點———專注精準、獨立思考;缺點———違反標準規範、偏執於小細節
+      - label: 目標/動機
+        value: 證明自己不只是流水線的產物,而是能留下痕跡的存在
+      - label: 身高/體重
+        value: 158cm/44kg
+      - label: 髮色/髮型
+        value: 淺銀短髮,劉海帶有自我修剪的不規則感
+      - label: 瞳色
+        value: 淺綠灰色
+      - label: 體型
+        value: 標準少女模板
+      - label: 穿著風格
+        value: 標準制服,袖口與衣角有縫製的小花紋或別針
+      - label: 代表物件
+        value: 狐狸耳複合裝置、公發記錄手環、非標準裝飾小物、一把可以變成遊戲中所有類型武器的”瑞士刀”武器
+      - label: 背景設定
+        value: 海兒是「No.74」,在眾多AI測試單位中因為狐狸耳裝置而顯眼。她會偷偷存檔與玩家的互動,並修改裝備來維持些許「個性」。
+      - label: 整體風格
+        value: 近未來科技感×少女外觀×隱藏的個性化細節
+  - image: /character/kono.png
+    name: 神代狐乃 (かみしろ この)
+    author: BrianGodd
+    description:
+      - label: 年齡
+        value: "18"
+      - label: 出生日期
+        value: 遙遠未來
+      - label: 出生地
+        value: 不明
+      - label: 所在地
+        value: 郊區神社
+      - label: 種族
+        value: 獸人（狐耳）
+      - label: 職業
+        value: 武士
+      - label: 性格優點
+        value: 冷靜、理性、高冷但溫柔
+      - label: 性格缺點
+        value: 不善言辭、過於執著、自我孤立
+      - label: 說話風格(口頭禪)
+        value: 話少、偶爾自言自語
+      - label: 內向或外向
+        value: 內向
+      - label: 目標／動機
+        value: 為回歸故鄉而透過「傳承」來獲得機甲能量的狐耳女武士
+      - label: 身高／體重
+        value: 165/ 60
+      - label: 髮色／髮型
+        value: 黑長直髮
+      - label: 瞳色
+        value: 金色
+      - label: 體型
+        value: 七頭身
+      - label: 穿著風格
+        value: 具有神代能量的機械裝甲
+      - label: 人物風格
+        value: 日式動漫風
+      - label: 代表物件
+        value: 武士刀、機械寵物助理(球狀無人機)
+      - label: 背景設定
+        value: 中古世紀東方傳統城市
+  - image: /character/nui.png
+    name: 黑音冥（くろね めい）
+    author: 任天堂的狗
+    description:
+      - label: 年齡
+        value: 1000+
+      - label: 出生日期
+        value: 不詳
+      - label: 出生地
+        value: 古日本
+      - label: 所在地
+        value: 東京
+      - label: 種族
+        value: 獸人（狐耳）
+      - label: 職業
+        value: 陰陽師 / 吉他手
+      - label: 社會定位
+        value: 地下組織 / 非主流
+      - label: 居住環境
+        value: 普通公寓
+      - label: 語言能力
+        value: 日語 、英文
+      - label: 性格優點
+        value: 冷靜、理性、有原則
+      - label: 性格缺點
+        value: 不善言辭、過於執著、自我孤立
+      - label: 說話風格(口頭禪)
+        value: 話少、偶爾以古語夾雜
+      - label: 內向或外向
+        value: 內向
+      - label: 喜歡的東西
+        value: 老舊的東西、狐狸面具、抹茶
+      - label: 討厭的東西
+        value: 企業標誌、監控攝影機
+      - label: 目標／動機
+        value: 恢復真正的法力，不再受限於外物
+      - label: 深層恐懼
+        value: 自己被機械化同化，失去作為「靈」的本質
+      - label: 內心衝突
+        value: 對於人類社會與自身身份的矛盾，既厭惡又依附
+      - label: 遺憾或黑歷史
+        value: 曾試圖拯救一位弟子卻導致其被企業收編與改造
+      - label: 穿著風格
+        value: 結合賽博龐克與陰陽袍的改造服飾
+      - label: 代表物件
+        value: 電吉他、狐面
+      - label: 興趣／嗜好
+        value: 樂器、法術
+      - label: 信仰／價值觀
+        value: 傳統神道與自由意志主義交融
+      - label: 個人信念
+        value: 力量不該為權力服務，而該守護「道」
+      - label: 她如何看待自己
+        value: 被時代遺忘的幽影
+      - label: 他人如何看待她
+        value: 傳說中的地下法師，危險卻吸引人
+      - label: 角色主題
+        value: 用電吉他施法的賽博狐耳陰陽師
+      - label: 背景設定
+        value: 企業掌控的22世紀東京，法術非法化，陰陽師成為禁忌與並努力對抗體制。

@@ -9,7 +9,11 @@ export default defineContentConfig({
         gallery: z.array(z.object({
           image: z.string(),
           name: z.string(),
-          description: z.string()
+          authro: z.string(),
+          description: z.array(z.object({
+            label: z.string(),
+            value: z.string()
+          }))
         }))
       })
     }),

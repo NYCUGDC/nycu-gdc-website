@@ -1,9 +1,22 @@
 <script setup>
     import { gsap } from 'gsap'
+    import { ref } from 'vue'
     
     const { data } = await useAsyncData(() => queryCollection('character').first())
 
     let ctx
+
+    const lightboxImage = ref('')
+    const showLightbox = ref(false)
+
+    function openLightbox(image) {
+        lightboxImage.value = image
+        showLightbox.value = true
+    }
+
+    function closeLightbox() {
+        showLightbox.value = false
+    }
 
     onMounted(() => {
         ctx = gsap.context(() => {
@@ -23,15 +36,29 @@
 <template>
     <main style="padding: 5vw;">
         <h1>原創角色</h1>
-        <p style="margin-top: 60px; font-family: Noto Sans TC; letter-spacing: 1px;">準備中，敬請期待...</p>
-        <div class="gallery">
-            <article v-for="character in data.gallery" class="character-split-view">
-                <img :src="character.image" alt=""></img>
-                <div style="padding: 10px;">
-                    <h1>{{ character.name }}</h1>
-                    <p style="font: 400 15px Noto Sans TC; color: var(--dark); white-space: pre-wrap;">{{ character.description }}</p>
+        <div class="grid grid-cols-3 gap-8">
+            <article v-for="(character, i) in data.gallery" :key="character.name">
+                <div class="bg-gray-100">
+                    <div class="relative">
+                        <img :src="character.image" :alt="character.name" @click="openLightbox(character.image)" style="cursor: pointer;">
+                        <span v-if="character.author" class="absolute bottom-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
+                            作者: {{ character.author }}
+                        </span>
+                    </div>
+                    <div style="padding: 10px;">
+                        <h1>{{ character.name }}</h1>
+                        <ul>
+                            <li v-for="(desc, index) in character.description" :key="index" class="m-2">
+                                <strong class="bg-amber-500 text-white p-1">{{ desc.label }}</strong> {{ desc.value }}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </article>
+        </div>
+        <div v-if="showLightbox" class="lightbox" @click.self="closeLightbox">
+            <span class="close" @click="closeLightbox">&times;</span>
+            <img class="lightbox-content" :src="lightboxImage">
         </div>
     </main>
 </template>
@@ -56,6 +83,34 @@
         border-radius: 10px;
         gap: 10px;
         padding: 10px;
+    }
+
+    .lightbox {
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lightbox-content {
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
     }
 
     @media (max-width: 800px) {
