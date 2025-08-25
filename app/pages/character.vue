@@ -39,12 +39,17 @@
         <div class="grid grid-cols-3 gap-8">
             <article v-for="(character, i) in data.gallery" :key="character.name">
                 <div class="bg-gray-100">
-                    <img :src="character.image" :alt="character.name" @click="openLightbox(character.image)" style="cursor: pointer;"></img>
+                    <div class="relative">
+                        <img :src="character.image" :alt="character.name" @click="openLightbox(character.image)" style="cursor: pointer;">
+                        <span v-if="character.author" class="absolute bottom-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
+                            作者: {{ character.author }}
+                        </span>
+                    </div>
                     <div style="padding: 10px;">
                         <h1>{{ character.name }}</h1>
                         <ul>
-                            <li v-for="(desc, index) in character.description" :key="index" class="outline-1 m-2">
-                                <strong class="bg-amber-500 text-white">{{ desc.label }}</strong> {{ desc.value }}
+                            <li v-for="(desc, index) in character.description" :key="index" class="m-2">
+                                <strong class="bg-amber-500 text-white p-1">{{ desc.label }}</strong> {{ desc.value }}
                             </li>
                         </ul>
                     </div>

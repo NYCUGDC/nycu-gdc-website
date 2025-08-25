@@ -1,6 +1,7 @@
 gallery:
   - image: /character/hale.png
     name: Hale (海兒)
+    author: Hung Min-Yu
     description:
       - label: 年齡
         value: 外觀17歲(實際為AI單位No.74)
@@ -38,6 +39,7 @@ gallery:
         value: 近未來科技感×少女外觀×隱藏的個性化細節
   - image: /character/kono.png
     name: 神代狐乃 (かみしろ この)
+    author: BrianGodd
     description:
       - label: 年齡
         value: "18"
@@ -79,6 +81,7 @@ gallery:
         value: 中古世紀東方傳統城市
   - image: /character/nui.png
     name: 黑音冥（くろね めい）
+    author: 任天堂的狗
     description:
       - label: 年齡
         value: 1000+
