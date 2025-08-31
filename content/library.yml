@@ -1,14 +1,25 @@
 list:
-  - category: GDC 暑期角色專案
+  - category: GDC 公開教學資源
     documents:
-      - title: Check Point 1
-        subtitle: 2025
-        link: https://www.nycu-gdc.org/
-      - title: 像素風格簡介
-        subtitle: 2025
-        link: https://www.nycu-gdc.org/
+      - title: 暑期角色設計專案
+        subtitle: 20250804
+        link: https://reurl.cc/OmvG2R 
+      # - title: 像素風格簡介
+      #   subtitle: 2025
+      #   link: https://www.nycu-gdc.org/
+  - category: 活動照片
+    documents:
+      - title: NYCU Game Jam 第0屆
+        subtitle: 20250615
+        link: https://drive.google.com/drive/folders/1mlS70XZTOR0-79K4V69mVz5OgoF0N6LD?usp=sharing
+      - title: 遊戲製作接龍 (Game Chain)
+        subtitle: 20250426
+        link: https://drive.google.com/drive/folders/1uVgxsV_JpJ8PD4TTeoZN1zm1hIrWBzBd?usp=sharing
+      - title: VR體驗會
+        subtitle: 20250322
+        link: https://drive.google.com/drive/folders/198x9EmirNp9wwpluQe-gFKwNY4-EP36N?usp=sharing
   - category: 其他
     documents:
-      - title: 測試 1
+      - title: 測試用
         subtitle: 2025
         link: https://www.nycu-gdc.org/

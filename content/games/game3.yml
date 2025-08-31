@@ -1,8 +1,48 @@
-name: 更酷遊戲
-date: 2025
-image: /games/game1.png
-link: https://www.nycu-gdc.org/
+name: Brainrot TD
+date: 20250615
+image: /games/Brainrot_TD.png
+link: https://g36maid.itch.io/brainrot-td
 description: |
-  程式：
-  美術：
-  音樂：
+  【NYCU Game Jam 第0屆】
+  
+  # Brainrot TD
+
+  A terminal-based "Italianbrainrot" style random tower defense game inspired by "Lucky Defense."
+
+  ## Overview
+
+  Brainrot TD is a roguelike tower defense game playable entirely in your terminal. Place, merge, and upgrade quirky "allies" to defend against waves of enemies. The game features random ally generation, merging mechanics, and a unique Italian meme-inspired theme.
+
+  Built with [Ratatui](https://ratatui.rs) for the TUI and event-driven architecture.
+
+  ## Features
+
+  - Randomized ally spawning with unique elements and abilities
+
+  - Ally merging and leveling system
+
+  - Configurable ally/enemy stats via `config.toml`
+
+  - Animated terminal UI with avatars and effects
+
+  - Logging and debugging support
+
+  ## Controls
+
+  - **Arrow keys**: Move cursor
+
+  - **Space**: Buy (spawn) a random ally (costs coins)
+
+  - **Enter**: Select or merge allies
+
+  - **Q / Esc / Ctrl+C**: Quit
+
+  ## Game Operation
+
+  - Place allies on the grid to defend against incoming enemies.
+
+  - Select two allies to merge them (if compatible) for upgrades or new abilities.
+
+  - Each ally has unique stats and effects based on their element(s).
+
+  - Survive all enemy waves to win!

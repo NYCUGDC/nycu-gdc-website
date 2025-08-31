@@ -1,10 +1,19 @@
-name: 測試 1
-date: 2025
-image: /games/game1.png
-link: 
+name: PigMaster
+date: 20250427
+image: /games/pigmaster.png
+link: https://nycu-gdc.itch.io/nycu-gdc-pigmaster
 description: |
-  遊戲測試
+  【113-2】 Game Chain
 
-  程式：
-  美術：
-  音樂：
+   * Round1：豬🐷 by 奕呈、Brian、Bogay 
+   * Round2：地下室🚇 by 承恩、Johnson、Remi 
+   * Round3：轉生到異世界🚛 by 長宏、久恩、Bogay 
+   * Round4：奇幻風格🫨 by Andrew、Brian、Remi 
+
+   玩法：
+   * A/左方向鍵：倒退
+   * S：蹲下
+   * Space：跳躍
+   * 長按 F 放開：蓄力滾 (滾的期間無視碰撞)
+   * 金幣超過10後即變身！！！
+   * 上方條是熟度，烤熟的話就會變成烤豬肉喔！

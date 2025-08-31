@@ -1,16 +1,31 @@
 list:
   - name: Brian
-    image: /committee/icon.png
+    image: /committee/Brian.png
     role: 社長
-  - name: ???
-    image: /committee/icon.png
-    role: ???
-  - name: ???
-    image: /committee/icon.png
-    role: ???
-  - name: ???
-    image: /committee/icon.png
-    role: ???
-  - name: ???
-    image: /committee/icon.png
-    role: ???
+  - name: Johnson
+    image: /committee/Johnson.png
+    role: 副社長
+  - name: 湧安
+    image: /committee/湧安.jpg
+    role: 總務
+  - name: 千羽
+    image: /committee/千羽.png
+    role: 公關/總務/教務
+  - name: 木白
+    image: /committee/木白.png
+    role: 公關/教務
+  - name: PotatoFish
+    image: /committee/PotatoFish.jpg
+    role: 公關
+  - name: Bogay
+    image: /committee/Bogay.jpg
+    role: 教務
+  - name: 敏佑
+    image: /committee/敏佑.png
+    role: 教務
+  - name: Remi
+    image: /committee/Remi.png
+    role: 教務
+  - name: 任天堂的狗
+    image: /committee/任天堂的狗.jpg
+    role: 教務

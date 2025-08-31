@@ -24,7 +24,7 @@
     <main style="padding: 5vw;">
         <h1>遊戲作品</h1>
         <section id="games">
-            <GameBlock v-for="game in data" :link="game.link" :name="game.name" :date="game.date" :description="game.description" img="/games/game1.png" />
+            <GameBlock v-for="game in data" :link="game.link" :name="game.name" :date="game.date" :description="game.description" :img="game.image" />
         </section>
     </main>
 </template>
