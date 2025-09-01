@@ -151,6 +151,7 @@
 
     #about .grid h3 {
         color: var(--blue);
+        margin-bottom: 10px;
     }
 
     #about .grid p {
@@ -160,7 +161,7 @@
 
     #committees {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
         gap: 15px;
     }
 
@@ -180,6 +181,7 @@
     .split-view {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 60px;
     }
 
     @media (max-width: 800px) {

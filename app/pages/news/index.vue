@@ -9,7 +9,6 @@
         ctx = gsap.context(() => {
             gsap.from('.link-block', { y: 60, opacity: 0, stagger: 0.1 })
         })
-        console.log(data.value)
     })
 
     onUnmounted(() => {

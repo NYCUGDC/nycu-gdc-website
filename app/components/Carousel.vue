@@ -63,7 +63,7 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
 .carousel {
   width: min(1000px, 100%);
   margin: 0 auto 24px;
-  border: 3px solid #000;
+  /* border: 3px solid #000; */
   border-radius: 24px/18px;   /* 膠囊形邊框 */
   position: relative;
   padding-bottom: 44px;       /* 圓點區 */
@@ -109,9 +109,9 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
 .dot {
   width: 12px; height: 12px;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid var(--orange);
   background: transparent;
   cursor: pointer;
 }
-.dot.active { background: #000; }
+.dot.active { background: var(--orange); }
 </style>
