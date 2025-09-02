@@ -1,8 +1,9 @@
 <script setup>
     import { gsap } from 'gsap'
     
-    const route = useRoute()
-    const { data } = await useAsyncData(route.path, () => queryCollection('news').path(route.path).first())
+    let path = useRoute().path
+    if(path.length > 1 && path.endsWith('/')) path = path.slice(0, -1)
+    const { data } = await useAsyncData(path, () => queryCollection('news').path(path).first())
 
     let ctx
 
