@@ -1,8 +1,8 @@
 <script setup>
     import { gsap } from 'gsap'
     
-    const path = useRoute().path
-    const { data } = await useAsyncData(path, () => queryCollection('news').path(path).first())
+    const route = useRoute()
+    const { data } = await useAsyncData(route.path, () => queryCollection('news').path(route.path).first())
 
     let ctx
 
@@ -14,7 +14,6 @@
 
     onUnmounted(() => {
         ctx.revert()
-        console.log
     })
 
     useSeoMeta({
