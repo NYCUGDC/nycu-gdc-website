@@ -20,7 +20,7 @@ list:
   - name: Bogay
     image: /committee/Bogay.jpg
     role: 教務
-  - name: 敏佑
+  - name: 敏祐
     image: /committee/敏佑.png
     role: 教務
   - name: Remi
